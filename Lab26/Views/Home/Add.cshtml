@@ -1,0 +1,15 @@
+﻿@using Lab26.Models;
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Item Added</h2>
+
+Cart:
+<ul>
+    @foreach (Item i in (List<Item>)(Session["Cart"]))
+    {
+        <li>@i.Price - @i.Name</li>
+    }
+
+</ul>
